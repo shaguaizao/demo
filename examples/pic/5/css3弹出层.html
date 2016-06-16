@@ -1,0 +1,136 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>香港十大影星</title>
+    <link rel="stylesheet" type="text/css" href="styles/basic.css" media="all"/>
+</head>
+<body>
+<div id="container" class="page page5">
+    <div class="div1200">
+        <span class="link page5span1 current"><img src="images/n8_03.jpg"></span>
+        <ul class="ullist8" style="margin-top: 30px;">
+            <li data-id="1" class="transform">
+                <div>
+                    <i></i>
+                    <span>周润发</span>
+                    <p>一个时代的坐标</p>
+                </div>
+                <img src="images/周润发.jpg">
+            </li>
+            <li data-id="2" class="transform">
+                <div>
+                    <i></i>
+                    <span>张国荣</span>
+                    <p>风华绝代的哥哥</p>
+                </div>
+                <img src="images/张国荣.jpg">
+            </li>
+            <li data-id="3" class="transform">
+                <div>
+                    <i></i>
+                    <span>梁朝伟</span>
+                    <p>魅力男人</p>
+                </div>
+                <img src="images/梁朝伟.jpg">
+            </li>
+            <li data-id="4" class="transform">
+                <div>
+                    <i></i>
+                    <span>刘德华</span>
+                    <p>岁月如歌</p>
+                </div>
+                <img src="images/刘德华.jpg">
+            </li>
+            <li data-id="5" class="transform">
+                <div>
+                    <i></i>
+                    <span>成龙</span>
+                    <p>真心英雄</p>
+                </div>
+                <img src="images/成龙.jpg">
+            </li>
+
+            <li data-id="6" class="transform">
+                <div>
+                    <i></i>
+                    <span>周星驰</span>
+                    <p>喜剧之王 </p>
+                </div>
+                <img src="images/周星驰.jpg">
+            </li>
+            <li data-id="7" class="transform">
+                <div>
+                    <i></i>
+                    <span>甄子丹</span>
+                    <p>武侠当道</p>
+                </div>
+                <img src="images/甄子丹.jpg">
+            </li>
+            <li data-id="8" class="transform">
+                <div>
+                    <i></i>
+                    <span>刘青云</span>
+                    <p>“我要成名”的“神探” </p>
+                </div>
+                <img src="images/刘青云.jpg">
+            </li>
+            <li data-id="9" class="transform">
+                <div>
+                    <i></i>
+                    <span>梅艳芳</span>
+                    <p>梅花香苦寒来 <br>却芳华绝代</p>
+                </div>
+                <img src="images/梅艳芳.jpg">
+            </li>
+            <li data-id="10" class="transform">
+                <div>
+                    <i></i>
+                    <span>张曼玉</span>
+                    <p>百变女人的魅力</p>
+                </div>
+                <img src="images/张曼玉.png">
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="bg" class="box_bg1"></div>
+<div id="dialog" class="box_ovo ">
+    <span id="close" class="close"><i></i></span>
+    <span class="prev"><i></i></span>
+    <span class="next"><i></i></span>
+    <div id="div_temp1">
+        <img class="oimg1" src="images/周润发2.jpg">
+        <div class="ovotxt">
+            <div class="ovohead">
+                <h1>周润发</h1>
+            </div>
+            <p>周润发印证香港80年代的黄金时期，并创造了多个脍炙人口的经典角色：许文强、小马哥、赌神等多不胜数。精湛的演技让他誉有香港“演技之神”的名衔，90年代后进军好莱坞跃升为国际巨星。</p>
+            <p>经典代表作：《英雄本色》、《和平饭店》、《卧虎藏龙》</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    (function(){
+        var box = document.getElementById('container');
+        var li = box.getElementsByTagName('li');
+        var bg = document.getElementById('bg');
+        var dialog = document.getElementById('dialog');
+        var close = document.getElementById('close');
+
+        for(var i=0; i<li.length; i++){
+            li[i].onclick = function(){
+                bg.className += ' current';
+                dialog.className += ' current';
+            }
+        }
+
+        close.onclick = function(){
+            bg.className = 'box_bg1';
+            dialog.className = 'box_ovo';
+        }
+    }());
+</script>
+</body>
+</html>

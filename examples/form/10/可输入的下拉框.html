@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>可输入的下拉框</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<style type="text/css">
+	.entry{
+		position: absolute;
+	    top:10;
+	    left:10;
+	    z-index: 0;
+	    width:100px;
+	    border-right: none;
+	    }
+	.data{
+		position: absolute;
+		top:10;
+		left:10;
+		z-index: -1;
+		width:120px;
+	}
+	</style>
+</head>
+
+<body>
+	<div id="div">
+		<input class="entry" id="entry" name="" type="text" />
+		<select name="" id="data" class="data">
+		</select>
+	</div>
+
+	<script type="text/javascript">
+	(function(){
+	    var entry=document.getElementById("entry");
+	    var data=document.getElementById("data");
+	    entry.onkeyup=function(e){
+		    e=e||window.event;
+		    var code=e.charCode||e.keyCode;
+		    if(code==13){
+			    addOpt(data,this.value);
+			    this.value="";
+		    }
+	    }
+	    function addOpt(obj,val){
+		    var opt=document.createElement("option");
+		    opt.value=val;
+		    opt.text=val;
+		    obj.options.add(opt);
+	    }
+	    data.onchange=function(){
+	    	entry.value=this.value;
+	    }
+	 
+    }());
+
+	</script>
+</body>
+</html>

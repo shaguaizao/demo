@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>限制只能输入数字</title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<div>
+		<form id="form">
+		    <div class="tableRow">
+			    <label for="name">用户名</label></br>
+			    <input type="text" name="name" id="name" placeholder="用户名" >
+			</div>
+			<div class="tableRow">
+				<label for="password">密码</label></br>
+				<input type="password" name="password" id="password" placeholder="密码" >
+			</div>
+	        <div class="submit">
+				<label for="submit"></label></br>
+				<button type="submit" name="submit" id="submit">提交</button>
+			</div>
+		</form>
+	</div>
+<script>
+    window.onload=function (){
+    	var input = document.getElementById("form").getElementsByTagName("input");
+    	for (var i=0;i<input.length;i++){
+    		input[i].onfocus=input[i].onblur=input[i].onkeyup=function(){
+    			this.value=this.value.replace(/\D/g,"");
+    		}
+    	}
+    };
+</script>
+</body>
+</html>

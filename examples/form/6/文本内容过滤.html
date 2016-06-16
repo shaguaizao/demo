@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Ctrl+Return提交表单</title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<div>
+		<form id="form">
+			<div class="tableRow">
+			    <label for="comments">备注</label></br>
+				<textarea name="comments" id="comments" rows="10" cols="48" placeholder="'ed2k' '蓝光' '1080p' 将被过滤"></textarea>
+			</div>
+			<div class="submit">
+				<label for="submit"></label>
+				<button type="submit" name="submit" id="submit">过滤</button>
+			</div>
+			<div class="tableRow">
+			    <label for="comments">备注</label></br>
+				<textarea name="comments" id="comments2" rows="10" cols="48"></textarea>
+			</div>
+		</form>
+	</div>
+	<script>
+		(function(){
+		var comments=document.getElementById("comments");
+		var comments2=document.getElementById("comments2");
+		var submit=document.getElementById("submit");
+		var sensitive=/ed2k|蓝光|1080p/g;
+		var message="";
+		submit.onclick=function(){
+			message=comments.value;
+			comments2.value=message.replace(sensitive,"*");
+			return false;
+		}
+	}());
+	</script>

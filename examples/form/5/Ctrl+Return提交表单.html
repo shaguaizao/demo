@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Ctrl+Return提交表单</title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<div>
+		<form id="form">
+		    <div class="tableRow">
+			    <label for="name">用户名</label></br>
+			    <input type="text" name="name" id="name" placeholder="张三" >
+			</div>
+			<div class="tableRow">
+				<label for="password">密码</label></br>
+				<input type="password" name="password" id="password" placeholder="请输入密码">
+			</div>
+			<div class="tableRow">
+			    <label for="comments">备注</label></br>
+				<textarea name="comments" id="comments" rows="10" cols="48"></textarea>
+			</div>
+			<div>
+				<p>还可以输入<span class="figure">140</span>个字</p>
+			</div>
+			<div class="tableRow">
+			    <label><input type="checkbox">记住我</label>  
+			</div>
+			<div class="submit">
+				<label for="submit"></label></br>
+				<button type="submit" name="submit" id="submit">提交</button>
+			</div>
+		</form>
+	</div>
+	<script>
+	(function(){
+		var form=document.getElementById("form");
+		var input=form.getElementsByTagName("input");
+		var textarea=form.getElementsByTagName("textarea")[0];
+		var submit=document.getElementById("submit");
+		submit.onclick=function(){
+			return false;
+		}
+		document.onkeydown=function(e){
+			var keynum=window.event?e.keyCode:e.which;
+			if(e.ctrlKey && keynum==13){
+				alert("表单已提交");
+			}
+			return false;
+		}
+	}());
+	</script>
+</body>
+</html>

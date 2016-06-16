@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>动态操作下拉菜单</title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+
+<body>
+	<div class="">
+		<form>
+			<input type="text" name="data" id="data">
+			<label><a id="add" href="javascript:;">添加</a></label></br>
+			<select name="" id="choose">
+				<option value="">中国人</option>
+				<option value="">蒙古人</option>
+				<option value="">朝鲜人</option>
+			</select>
+			<label><a id="del" href="javascript:;">删除</a></label>
+		</form>
+	</div>
+	<script type="text/javascript">
+	window.onload=function(){
+		var data=document.getElementById("data");
+		var add=document.getElementById("add");
+		var choose=document.getElementById("choose");
+		var del=document.getElementById("del");
+		add.onclick=function(){
+			var newOpt=check(data);
+			if(newOpt){
+				choose.options.add(new Option(newOpt,newOpt));
+			}
+		}
+		del.onclick=function(){
+			var i=choose.selectedIndex;
+			choose.options.remove(i);
+		}
+		function check(obj){
+			if(obj.value.length<1){
+				alert("");
+				return false;
+			}
+			return obj.value;
+		}
+		
+	};
+	</script>
+</body>
+</html>

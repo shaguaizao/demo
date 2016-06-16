@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>单元行上鼠标悬停提示</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<style type="text/css">
+        .demo{ width:350px;
+        	margin:50px 
+        	auto; text-align:
+        	left; padding:0; }
+        .list{ color:#2a6496;}
+        .list li{ position:relative; 
+        	width:320px;
+        	list-style:decimal inside;
+        	line-height:35px;
+        	white-space:nowrap;
+        	overflow:hidden;
+        	text-overflow:ellipsis;}
+        .list a{font-size:18px;}
+        .tip{position:absolute;
+        	left: 0;
+        	display:none;
+            color:#483D8B;
+            background:#E6E6FA; 
+            line-height:25px;
+            font-size:12px;
+            padding:2px 5px;
+            border-radius:5px;
+            z-index:1}
+    </style>
+</head>
+
+<body>
+	<div id="div" class="demo">
+		<ol class="list">
+			<li><a href="http://sports.sina.com.cn/g/euro/2016-06-02/doc-ifxsvenx3146216.shtml" data-title="FIFA最新排名:阿根廷榜首德国第4 英格兰出前十">FIFA最新排名:阿根廷榜首德国第4 英格兰出前十</a></li>
+			<li><a href="http://sports.sina.com.cn/g/laliga/2016-06-03/doc-ifxsvenx3176047.shtml" data-title="欧洲杯收入榜TOP9:C罗遥遥领先 伊布第2贝尔第3">欧洲杯收入榜TOP9:C罗遥遥领先 伊布第2贝尔第3</a></li>
+			<li><a href="http://sports.sina.com.cn/g/laliga/2016-06-02/doc-ifxsvenx3105361.shtml" data-title="曝莱万逼宫拜仁！已与皇马达协议 强硬要求转会">曝莱万逼宫拜仁！已与皇马达协议 强硬要求转会</a></li>
+			<li><a href="http://sports.sina.com.cn/g/laliga/2016-06-03/doc-ifxsvenx3177946.shtml" data-title="西媒曝C罗将欧冠奖金60万全部捐给公益组织">西媒曝C罗将欧冠奖金60万全部捐给公益组织</a></li>
+			<li><a href="http://sports.sina.com.cn/g/seriea/2016-06-03/doc-ifxsvenv6400208.shtml" data-title="莫拉蒂亲证苏宁购国米已签字 转让已接近完成">莫拉蒂亲证苏宁购国米已签字 转让已接近完成</a></li>
+			<li><a href="http://sports.sina.com.cn/g/pl/2016-06-03/doc-ifxsvenx3184342.shtml" data-title="利物浦铁闸考虑中超:克洛普不要我了 就去捞一笔">利物浦铁闸考虑中超:克洛普不要我了 就去捞一笔</a></li>
+		</ol>
+	</div>
+	<script type="text/javascript">
+
+	(function(){
+		var div=document.getElementById("div");
+		var links=div.getElementsByTagName("a");
+		var tip=creatTip();
+		for (var i=0;i<links.length;i++){
+			links[i].onmousemove=function(e){
+			    e=e||event;
+			    var title=this.getAttribute("data-title");
+			    tip.innerHTML=title;
+			    tip.style.display="block";
+			    tip.style.left=e.clientX+15+"px";
+			    tip.style.top=e.clientY+10+"px";
+		    }
+		    links[i].onmouseout=function(e){
+			    tip.style.display="none"
+			}
+		}
+		function creatTip(){
+		    var div=document.createElement("div");
+		    div.className="tip";
+		    return document.body.appendChild(div);
+		}
+     }());
+	</script>
+</body>
+</html>
