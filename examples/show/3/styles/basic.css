@@ -1,0 +1,42 @@
+body,ul,li{
+	margin:0;
+	padding:0;
+}
+body{
+	font:12px/1.5 "微软雅黑";
+	｝
+}
+#outer{
+	width:450px;
+	margin:20px auto;
+}
+#tab{
+	overflow:hidden;
+	zoom:1;
+	background:#FF0000;
+	border:0px solid #FF0000;
+	font:17px "隶书";
+}
+#tab li{
+	float:left;
+	color:#fff;
+	height:40px;
+	cursor:pointer;
+	line-height:40px;
+	list-style-type:none;
+	padding:0 20px;
+}
+#tab li.current{
+	color:#000;
+	background:#FF0000;
+}
+#content{
+	border:0px ;
+	border-top-width:0;
+}
+#content ul{
+	line-height:25px;
+	display:none;
+	margin:0 30px;
+	padding:10px 0;
+}
