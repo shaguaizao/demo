@@ -1,0 +1,23 @@
+body,input,p{
+	margin:0;
+	padding:0;
+}
+body{
+	font:12px/1.5 "微软雅黑";
+}
+#outer{
+	width:200px;
+	margin:20px auto;
+}
+input{
+	margin-right:6px;
+	vertical-align:middle;
+}
+#tips{
+	padding:5px;
+	margin-top:5px;
+	background:	#EE0000;
+	border:5px solid #EE0000;
+	display:none;
+	color:#ADFF2F;
+}

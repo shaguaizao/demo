@@ -1,0 +1,23 @@
+body{
+	color:#fff;
+	font:16px/1.5 "微软雅黑";
+}
+#div1{
+	width:150px;
+	height:150px;
+	margin:0 auto;
+	padding:10px;
+	background:black;
+	border:10px solid #000;
+	cursor:pointer;
+}
+#div1.hover{
+	color:#8A2BE2;
+	border-radius:50%;
+	background:#f0f0f0;
+	border:10px solid red;
+}
+#content{
+	padding-top:20px;
+	padding-left: 10px;
+}

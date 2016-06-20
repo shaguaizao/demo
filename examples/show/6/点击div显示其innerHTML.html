@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>点击Div，显示其innerHTML</title>
+<link rel="stylesheet" type="text/css" href="styles/basic.css">
+</head>
+<body>
+<div id="outer">
+    <div><strong>新浪体育讯</strong>北京时间6月17日21时(法国当地时间15时)，欧洲杯E组第2轮在图卢兹先赛1场，意大利1比0绝杀瑞典，2轮积6分提前出线。终场前，意大利中场帕罗洛头球中楣，替补扎扎助攻国米前锋埃德尔绝杀。瑞典本届杯赛<strong>180分钟</strong>还没有<strong>1次射正</strong>。</div>
+    <div>6月17日晚，酷派集团发布公告，表示公司第一大股东Data Dreamland与买方达成股权交易协议，Data Dreamland将出售公司11%的股份，交易金额为10.47亿港元。买方持有酷派集团17.90%的股份，交易后将持有公司<strong>28.90%股份</strong>，成为公司第一大股东。根据公开信息，买方即为酷派集团第二大股东<strong>乐视控股旗下子公司</strong>。</div>
+    <div><strong>据外媒</strong>，巴西正在考虑退出联合国工业发展组织等34个二线国际组织，意在节省成本。由于财政危机，巴西已欠下联合国等国际机构8.66亿美元，其海外工作人员甚至连支付房租都有困难。</div>
+    <div>6月15日上午，<strong style="color:red;">歙县某镇党委委员、副镇长何晟(化名)前往县城办事</strong>，其间，在某网络约车软件上“接单”，驾私家车载客从该县城区前往开发区，后被人认出。有人向歙县纪委、运管等部门举报此事。运管部门称此举属于违规营运；县纪委则表示将依规查处。而何晟在接受记者采访时表示接受处罚，<strong>并称今后不会再做此类“兼职”。</strong></div>
+</div>
+<script>
+window.onload = function (){
+	var div = document.getElementById("outer").getElementsByTagName("div");
+	for(var i = 0; i < div.length; i++){
+		div[i].onclick = function (){
+			alert(this.innerHTML);	
+		};	
+	}
+}
+</script>
+</body>
+</html>
+
+

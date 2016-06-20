@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>鼠标移入移出改变图片列表透明度</title>
+<link rel="stylesheet" type="text/css" href="styles/basic.css">
+
+</head>
+<body>
+<ul id="list">
+    <li><img src="images/成龙.jpg" /></li>
+    <li><img src="images/梁朝伟.jpg" /></li>
+    <li><img src="images/刘德华.jpg" /></li>
+    <li><img src="images/刘青云.jpg" /></li>
+    <li><img src="images/梅艳芳.jpg" /></li>
+    <li><img src="images/张国荣.jpg" /></li>
+    <li><img src="images/张曼玉.jpg" /></li>
+    <li><img src="images/甄子丹.jpg" /></li>
+    <li><img src="images/周润发.jpg" /></li>
+    <li><img src="images/周星驰.jpg" /></li>
+</ul>
+<script>
+window.onload = function (){
+	var oLi = document.getElementsByTagName("li");	
+	for (var i = 0; i < oLi.length; i++){
+		oLi[i].onmouseover = function (){
+			this.className = "current"	
+		};
+		oLi[i].onmouseout = function (){
+			this.className = ""	
+		}
+	}
+}
+</script>
+</body>
+</html>

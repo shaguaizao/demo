@@ -1,0 +1,41 @@
+body,p{
+	margin:0;
+	padding:0;
+}
+body{
+	color:#333;
+	font:12px/1.5 "微软雅黑";
+	padding-top:10px;
+}
+#outer{
+	width:300px;
+	margin:20px auto;
+}
+p{
+	margin-bottom:10px;
+}
+button{
+	margin-right:20px;
+}
+label{
+	width:5em;
+	display:inline-block;
+	text-align:right;
+}
+input{
+	padding:1px;
+	font-family:inherit;
+	border:1px solid #ccc;
+}
+#div1{
+	color:#080808;
+	width:200px;
+	height:200px;
+	background:#E0FFFF;
+	margin:0 auto;
+	padding:10px;
+	border-radius:50%;
+}
+#content{
+	padding:50px 20px 20px 20px;
+}

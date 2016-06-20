@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>函数传参，改变Div任意属性的值</title>
+<link rel="stylesheet" type="text/css" href="styles/basic.css">
+</head>
+<body>
+<div id="div1">
+     <p id="content">在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。<p>
+</div>
+
+<div id="outer">
+    <p><label>属性名：</label><input type="text" value="border-radius" /></p>
+    <p><label>属性值：</label><input type="text" value="50%" /></p>
+    <p><label></label><button>确定</button><button>重置</button></p>
+</div>
+<script>
+var changeStyle = function (elem, name, value) {
+	elem.style[name] = value;	
+}
+window.onload = function (){	
+	var div1 = document.getElementById("div1");
+	var button = document.getElementsByTagName("button");
+	var input = document.getElementsByTagName("input");
+	button[0].onclick = function (){
+		changeStyle(div1, input[0].value, input[1].value)	
+	},
+	button[1].onclick = function (){
+		div1.removeAttribute("style")
+	}
+}
+</script>
+</body>
+</html>
