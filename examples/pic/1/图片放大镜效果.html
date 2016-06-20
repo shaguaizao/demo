@@ -1,25 +1,28 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>图片放大镜效果</title>
-    <link rel="stylesheet" type="text/css" href="scripts/basic.css">
+    <meta charset="utf-8"/>
+    <title>图片放大镜效果</title>
+    <link rel="stylesheet" type="text/css" href="styles/basic.css">
+    <style type="text/css">
+        
+    </style>
 </head>
-
 <body>
-<div id="div" class="domo">
-	<div class="small_pic">
-		<span class="mark"></span>
-		<span class="float_layer"></span>
-		<img src="http://img22.mtime.cn/up/2012/03/13/111807.64378235_500.jpg" alt="放大镜图片一"/>
-	</div>
-	<div class="big_pic">
-		<img src="http://img22.mtime.cn/up/2012/03/13/111807.64378235_o.jpg" alt="放大镜图片二"/>
-	</div>
-</div>
+<div id="div">
+    <div class="small_pic">
+        <span class="mark"></span>
+        <span class="float_layer"></span>
+        <img src="images/small梁朝伟.jpg" alt="放大镜图片一"/>
+    </div>
 
-	<script type="text/javascript">
-	(function(){
+    <div class="big_pic">
+        <img src="images/big梁朝伟.jpg" alt="放大镜图片二"/>
+    </div>
+</div>
+<script>
+    (function(){
         var div = document.getElementById('div');
         var small = getByCls(div, 'small_pic')[0];
         var big = getByCls(div, 'big_pic')[0];
@@ -68,7 +71,6 @@
             }
         }
     }());
-	</script>
+</script>
 </body>
-
 </html>
