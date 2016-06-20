@@ -1,0 +1,42 @@
+body,div{
+	margin:0;
+	padding:0;
+}
+body{
+	color:#fff;
+	font:16px/1.5 "Htlvetica";
+}
+#bell{
+	width: 350px;
+	height: 350px;
+	background: #CDCD00;
+	margin:20px auto;
+	border-radius:50%;
+	border:20px solid #D1EEEE;
+}
+#clock{
+	width:220px;
+	height: 70px;
+	text-align:center;
+	background:#FFF68F;
+	margin:-250px auto;
+	padding:10px;
+
+}
+span{
+	width:100px;
+	line-height:2;
+	text-align:center;
+	color:red; 
+	font: 30px/1.5 ":Arial";
+	margin:14px;
+	border:5px solid #00E5EE;
+
+
+}
+i{
+	font:20px/1.5 "微软雅黑";
+	color:#7CFC00;
+	text-align: center;
+	margin:12px;
+}
