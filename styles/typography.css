@@ -34,7 +34,8 @@ textarea{
 }
 address,caption,cite,code,dfn,em,i,th,var{
 	font-style:normal;
-	font-weight:normal;}
+	font-weight:normal;
+}
 legend{
 	color:#000;
 }
@@ -43,7 +44,7 @@ abbr,acronym{
 	font-variant:normal;
 }
 a{
-	color:#8470FF;
+	color:rgb(64,160,192);
 	text-decoration:none;
 }
 a:hover{ 
@@ -209,7 +210,6 @@ textarea{
 .user-input .form-group{ 
 	position:relative;
 }
-/*.user-input .popover{ position:absolute; left:525px;}*/
 .user-input .popover{ 
 	position:absolute; 
 	left:435px;
