@@ -13,7 +13,7 @@ body {
   font-family: '微软雅黑', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background: #27ae60;
+  background: rgb(120,175,11);
 }
 
 nav ul {
@@ -32,7 +32,7 @@ h1 {
 
 .nav {
   margin: 0 auto;
-  background: #1e8449;
+  background: rgb(23,114,34);
   color: #f0f0f0;
 }
 .nav__menu-item:first-child{
@@ -47,7 +47,6 @@ h1 {
 .nav__menu {
   line-height: 45px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 .nav__menu-item {
   display: inline-block;
@@ -55,7 +54,7 @@ h1 {
   text-align: center;
 }
 .nav__menu-item:hover {
-  background-color: #9b59b6;
+  background-color: rgb(240,167,13);
 }
 .nav__menu-item:hover .nav__submenu {
   display: block;
@@ -66,8 +65,8 @@ h1 {
   display: none;
   position: absolute;
   width: 220px;
-  background-color: #9b59b6;
+  background-color: rgb(240,167,13);
 }
 .nav__submenu-item:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgb(240,167,13);
 }
